@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/yeshenxuan/JD.git ~/JD
+          git clone https://github.com/yeshenxuan/JD.git ~/Add_JD_sharecode
       - name: 提交互助码
         run: |
           cd ~/Add_JD_sharecode/.github/scripts
