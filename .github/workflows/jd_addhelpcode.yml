@@ -21,7 +21,7 @@ jobs:
           python-version: 3.7
          
       - name: 'Install requirements'
-        run: pip install -r ./jd/requirements.txt 
+        run: pip install -r ./requirements.txt 
         
       - name: 'run jd_addhelpcode' 
         run: python3 ./Add_code.py
