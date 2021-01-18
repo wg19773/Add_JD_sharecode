@@ -1,0 +1,27 @@
+name: jd_addhelpcode
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '2 18 * * * '
+  watch:
+    types: [started]
+  repository_dispatch:
+        types: jd_addhelpcode
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+         
+      - name: 'Install requirements'
+        run: pip install -r ./jd/requirements.txt 
+        
+      - name: 'run jd_addhelpcode' 
+        run: python3 ./Add_code.py
